@@ -1,28 +1,50 @@
 <html>
     <head>
         <title>Complaint Form</title>
+        <style>
+            body {
+                background-color:azure
+            }
+            #button {
+                background-color: black;
+                color: white;
+                margin: 25px;
+            }
+            #button:hover {
+                background-color: blue;
+            }
+            .text {
+                margin: 10px;
+            }
+            .text label{
+                font-size: 17px;
+            }
+
+        </style>
     </head>
 
     <body>
         <h1>Apartment Complaint Form</h1>
         <form name="complaintForm" method="get" action="submit_page.html">
             <!-- Personal Information -->
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" required>
-            <br>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <br>
-            <hr>
+            <div class="text">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+                <br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <br>
+                <hr>
 
-            <!-- Apartment Information -->
-            <label for="aptNumber">Apartment Number:</label>
-            <input type="text" id="aptNumber" required>
-            <label for="roomLetter">Room Letter (if applicable):</label>
-            <input type="text" id="roomLetter"> <br> <br>
+                <!-- Apartment Information -->
+                <label for="aptNumber">Apartment Number:</label>
+                <input type="text" id="aptNumber" required>
+                <label for="roomLetter">Room Letter (if applicable):</label>
+                <input type="text" id="roomLetter" maxlength="1"> <br> <br>
+            </div>
 
             <!-- Areas of Complaint -->
             <label for="area">Area of Complaint:</label> <br>
@@ -39,7 +61,7 @@
             <textarea id="complaint" name="text" rows="5" cols="50" placeholder="Type your complaint here"></textarea><br>
             <br>
             <br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="button">
 
 
         </form>
